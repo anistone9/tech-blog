@@ -1,17 +1,10 @@
 <div class="row">
-  <div class="col-auto">
+  <div class="col-md-12">
     <h2>Your Dashboard</h2>
   </div>
-</div>
 
-<div class="col-md-8">
-  <button class="btn btn-primary">New Post</button>
-</div>
-
-<div class="row mt-4">
-  <div class="col-md-8">
+  <div class="new-post-form col-md-12" style="display: none" id="new-post-form">
     <h3>Create New Post</h3>
-
     <form class="form new-blog-form">
       <div class="form-group">
         <label for="blog-title">Title</label>
@@ -28,19 +21,22 @@
   </div>
 
   {{#if blogs.length}}
-  <div class="col-md-8 blog-list">
+  <div class="col-md-12 blog-list">
     {{#each blogs as |blog|}}
     <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/blog/{{blog.id}}">{{blog.title}}</a></h4>
-      </div>
-      <div class="col-md-8">
-        <h4>{{format_date blog.date_created}}</h4>
+      <div class="col-md-12">
+        <h4><a href="/blog/{{blog.id}}">{{blog.title}} {{format_date blog.date_created}}</a></h4>
       </div>
     </div>
     {{/each}}
   </div>
-  {{/if}}
+  {{/if}} 
 </div>
+
+
+<div class="new-post col-md-12 text-center">
+  <button class="btn btn-primary">New Post</button>
+</div>
+
 
 <script src="./js/dashboard.js"></script>
