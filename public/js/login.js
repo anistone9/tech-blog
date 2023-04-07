@@ -55,7 +55,7 @@ document
   .querySelector('#signUpToggle')
   .addEventListener('click', (event) => {
     event.preventDefault();
-    if(event.target.innerText = "Sign Up") {
+    if(event.target.innerText == "Sign Up") {
       document.querySelector("#loginDiv").style.display = "none";
       document.querySelector("#signUpDiv").style.display = "block";
       document.querySelector("#signUpToggle").innerText = "Login";
