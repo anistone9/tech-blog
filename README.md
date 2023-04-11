@@ -45,22 +45,24 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 
 # Table of Contents   
 - [Description](#description)   
-- [Installation](#installation)
-- [Usage](#usage)
-- [Demo](#demo)
-- [Credits](#credits)  
-- [License](#license)     
+- [Installation](#installation)    
+- [Usage](#usage)    
+- [Demo](#demo)    
+- [Credits](#credits)     
+- [License](#license)       
 
-## Description     
+## Description      
 This application is a tech blog in CMS-style (similar to a Wordpress site), which allows users to create accounts, view blog posts created by other users and comment on their posts. It also allows users to create their own blog posts, then update or delete them. The application follows the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and express-session npm package for authentication.   
 
 ## Installation   
 Clone the repository in GitHub, and install Node.js. MySQL2, Sequelize, Express, and dotenv are also imported and used for this application.              
 
 # Usage    
-To use this application, first open the .env file and use environment variables to store your MySQL sensitive data such as username, password, and database name.   
-Next, open the integrated terminal at db level and run 'npm install' (npm i). Then use 'mysql -y root -p' and password, and run 'source schema/sql.' Exit and run 'npm run seed.'     
-Last step is to run 'node server' and then open the browser and go to localhost.     
+To use this application, first open the .env file and use environment variables to store your MySQL sensitive data such as username, password, and database name. Next, open the integrated terminal at db level and run 'npm install' (npm i). Then use 'mysql -u root -p' and password, and run 'source schema/sql.' Exit and run 'npm run seed.' Last step is to run 'node server' at app or server level, and then open the browser and go to localhost.   
+
+The homepage displays existing blog posts created by other users (or from seeding the database). Users not logged in can see all existing posts on the homepage, but if attemping to open the posts to add comments, or clicking the Dashboard page, will take them to the login page. The login page has two options for toggling, login and sign up. After logging in, users can access their Dashboard page and create new blog posts. After creating new posts, they get displayed on this page, with links to allow updating and deleting them. Once created and/or updated, these new posts are displayed on the homepage as well.    
+
+Using the Heroku deployed app allows the same functionality, but might require running 'heroku run npm run seed.'     
 
 ## Demo   
 
