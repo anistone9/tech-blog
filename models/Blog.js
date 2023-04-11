@@ -30,8 +30,12 @@ Blog.init(
         key: 'id',
       },
     },
-    comment: {
-      type: DataTypes.STRING,
+    comment_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'comment',
+        key: 'id',
+      },
     },
   },
   {

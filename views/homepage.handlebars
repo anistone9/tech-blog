@@ -3,13 +3,13 @@
 <div class="row mb-4 blog">
   <div class="col-md-12">
     <h2>
-      <a href="/otherblog/{{blog.id}}">{{blog.title}}</a>
+      <a href="/otherblog/{{blog.id}}">{{title}}</a>
     </h2>
-    <p>Posted by {{blog.user.username}} on {{format_date blog.date_created}}</p>
+    <p>Posted by {{user.username}} on {{format_date date_created}}</p>
   </div>
   <div class="col-md-12">
     <p>
-      {{blog.content}}
+      {{content}}
     </p>
   </div>
 </div>
