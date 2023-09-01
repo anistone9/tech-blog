@@ -64,9 +64,7 @@ The homepage displays existing blog posts created by other users (or from seedin
 
 Using the Heroku deployed app allows the same functionality, but might require running 'heroku run npm run seed.'     
 
-## Demo   
-
-https://murmuring-retreat-41500.herokuapp.com/homepage    
+## Demo    
 
 ![image](https://user-images.githubusercontent.com/58886869/231236767-7474fde4-7d3a-44eb-9cc1-c99ac3c48504.png)    
 
